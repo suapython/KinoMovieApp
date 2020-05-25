@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,13 @@
 		B5FF55D4247C3725004CBCA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5FF55D3247C3725004CBCA0 /* Assets.xcassets */; };
 		B5FF55D7247C3725004CBCA0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5FF55D6247C3725004CBCA0 /* Preview Assets.xcassets */; };
 		B5FF55DA247C3725004CBCA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5FF55D8247C3725004CBCA0 /* LaunchScreen.storyboard */; };
+		B5FF55E8247C3DD9004CBCA0 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF55E7247C3DD9004CBCA0 /* ImageService.swift */; };
+		B5FF55EA247C3DFC004CBCA0 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF55E9247C3DFC004CBCA0 /* ImageLoader.swift */; };
+		DA6F7BAFCBE555A6A1AD7724 /* Pods_KinoMovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 606DE596AE8D146A2EFD7618 /* Pods_KinoMovieApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		606DE596AE8D146A2EFD7618 /* Pods_KinoMovieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KinoMovieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FF55CA247C3724004CBCA0 /* KinoMovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KinoMovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FF55CD247C3724004CBCA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5FF55CF247C3724004CBCA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,10 @@
 		B5FF55D6247C3725004CBCA0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B5FF55D9247C3725004CBCA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5FF55DB247C3725004CBCA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5FF55E7247C3DD9004CBCA0 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		B5FF55E9247C3DFC004CBCA0 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		C629B5DA6AD1313099BC6829 /* Pods-KinoMovieApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinoMovieApp.debug.xcconfig"; path = "Target Support Files/Pods-KinoMovieApp/Pods-KinoMovieApp.debug.xcconfig"; sourceTree = "<group>"; };
+		CE00D57868288150B37D213A /* Pods-KinoMovieApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinoMovieApp.release.xcconfig"; path = "Target Support Files/Pods-KinoMovieApp/Pods-KinoMovieApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA6F7BAFCBE555A6A1AD7724 /* Pods_KinoMovieApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26898F0DCECCBDB3FDC2517F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				606DE596AE8D146A2EFD7618 /* Pods_KinoMovieApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA4D67BC9B6FC52658DC5B9C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C629B5DA6AD1313099BC6829 /* Pods-KinoMovieApp.debug.xcconfig */,
+				CE00D57868288150B37D213A /* Pods-KinoMovieApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B5FF55C1247C3724004CBCA0 = {
 			isa = PBXGroup;
 			children = (
 				B5FF55CC247C3724004CBCA0 /* KinoMovieApp */,
 				B5FF55CB247C3724004CBCA0 /* Products */,
+				AA4D67BC9B6FC52658DC5B9C /* Pods */,
+				26898F0DCECCBDB3FDC2517F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,7 +86,11 @@
 			children = (
 				B5FF55CD247C3724004CBCA0 /* AppDelegate.swift */,
 				B5FF55CF247C3724004CBCA0 /* SceneDelegate.swift */,
-				B5FF55D1247C3724004CBCA0 /* ContentView.swift */,
+				B5FF55E4247C3D2C004CBCA0 /* Models */,
+				B5FF55E3247C3D22004CBCA0 /* View Models */,
+				B5FF55E2247C3D18004CBCA0 /* Views */,
+				B5FF55E5247C3D5D004CBCA0 /* Extension&Protocols */,
+				B5FF55E1247C3D0C004CBCA0 /* Services */,
 				B5FF55D3247C3725004CBCA0 /* Assets.xcassets */,
 				B5FF55D8247C3725004CBCA0 /* LaunchScreen.storyboard */,
 				B5FF55DB247C3725004CBCA0 /* Info.plist */,
@@ -75,6 +107,52 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		B5FF55E1247C3D0C004CBCA0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B5FF55E6247C3DAF004CBCA0 /* ImageLoader */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B5FF55E2247C3D18004CBCA0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B5FF55D1247C3724004CBCA0 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B5FF55E3247C3D22004CBCA0 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		B5FF55E4247C3D2C004CBCA0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B5FF55E5247C3D5D004CBCA0 /* Extension&Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Extension&Protocols";
+			sourceTree = "<group>";
+		};
+		B5FF55E6247C3DAF004CBCA0 /* ImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				B5FF55E7247C3DD9004CBCA0 /* ImageService.swift */,
+				B5FF55E9247C3DFC004CBCA0 /* ImageLoader.swift */,
+			);
+			path = ImageLoader;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +160,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5FF55DE247C3725004CBCA0 /* Build configuration list for PBXNativeTarget "KinoMovieApp" */;
 			buildPhases = (
+				BFA0F311B01DA7A2CC23C499 /* [CP] Check Pods Manifest.lock */,
 				B5FF55C6247C3724004CBCA0 /* Sources */,
 				B5FF55C7247C3724004CBCA0 /* Frameworks */,
 				B5FF55C8247C3724004CBCA0 /* Resources */,
+				6B6F13B9D43D94AD2D2A5B71 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,12 +221,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6B6F13B9D43D94AD2D2A5B71 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KinoMovieApp/Pods-KinoMovieApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KinoMovieApp/Pods-KinoMovieApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KinoMovieApp/Pods-KinoMovieApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BFA0F311B01DA7A2CC23C499 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KinoMovieApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B5FF55C6247C3724004CBCA0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B5FF55CE247C3724004CBCA0 /* AppDelegate.swift in Sources */,
+				B5FF55E8247C3DD9004CBCA0 /* ImageService.swift in Sources */,
+				B5FF55EA247C3DFC004CBCA0 /* ImageLoader.swift in Sources */,
 				B5FF55D0247C3724004CBCA0 /* SceneDelegate.swift in Sources */,
 				B5FF55D2247C3724004CBCA0 /* ContentView.swift in Sources */,
 			);
@@ -282,6 +406,7 @@
 		};
 		B5FF55DF247C3725004CBCA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C629B5DA6AD1313099BC6829 /* Pods-KinoMovieApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +427,7 @@
 		};
 		B5FF55E0247C3725004CBCA0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE00D57868288150B37D213A /* Pods-KinoMovieApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
